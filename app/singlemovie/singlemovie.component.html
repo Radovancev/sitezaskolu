@@ -1,0 +1,31 @@
+
+<div class="container">
+  
+	<div class="movie-card" [@MoviesBlock]='state' (click)="animate()">
+      <span class="info-section" style="text-align: left">All about movie : {{movie.title}}</span>
+		<div class="movie-header">
+      <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
+			
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>Original title</label>
+					<span>{{movie.original_title}}</span>
+				</div><!--date,time-->
+				<div class="info-section">
+					<label>Movie Rating</label>
+					<span>{{movie.vote_average | number:'1.2-2'}}</span>
+				</div><!--screen-->
+				<div class="info-section">
+					<label>Language</label>
+					<span>{{movie.original_language }}</span>
+				</div><!--row-->
+			
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
